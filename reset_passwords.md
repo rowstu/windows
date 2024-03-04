@@ -2,8 +2,9 @@
 
 Boot USB to recover and choose command prompt, then:
 ```
-move c:\windows\system32\utilman.exe c:\
-copy c:\windows\system32\cmd.exe c:\windows\system32\utilman.exe
+cd c:\windows\system32
+rename utilman.exe utilman.exe.orig
+copy cmd.exe utilman.exe
 ```
 The reboot and press Ease of Access button which will open the command prompt instead of accessibility.
 Then enter
@@ -23,4 +24,8 @@ chntpw -l SAM
 Perform action on the account
 ```
 chntpw -u <username> SAM
+```
+Use interactive mode
+```
+chntpw -i SAM
 ```
